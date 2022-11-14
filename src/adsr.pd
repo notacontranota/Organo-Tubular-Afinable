@@ -1,0 +1,52 @@
+#N canvas 628 339 354 307 10;
+#X floatatom 155 111 5 0 0 0 - - -;
+#X floatatom 192 111 5 0 0 0 - - -;
+#X floatatom 230 111 5 0 0 0 - - -;
+#X floatatom 310 118 5 0 0 0 - - -;
+#X obj 155 87 r sa;
+#X obj 230 87 r ss;
+#X obj 192 87 r sd;
+#X obj 310 95 r sr;
+#X obj 146 140 pack f f f f;
+#X obj 265 144 pack f f;
+#X obj 146 217 vline~;
+#X obj 266 24 inlet;
+#X obj 266 119 sel 0;
+#X obj 145 245 outlet~;
+#X obj 22 37 vsl 15 128 10 300 0 1 sa empty A 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 50 36 vsl 15 128 0 500 0 1 sd empty D 0 -9 0 10 -262144 -1 -1
+0 1;
+#X obj 77 36 vsl 15 128 0 1 0 1 ss empty S 0 -9 0 10 -262144 -1 -1
+12700 1;
+#X obj 106 36 vsl 15 128 10 1000 0 1 sr empty R 0 -9 0 10 -262144 -1
+-1 0 1;
+#X obj 146 26 inlet;
+#X text 146 8 Note;
+#X text 261 6 Velocity;
+#X obj 146 53 stripnote;
+#X obj 284 50 r s_panic;
+#X msg 284 73 0;
+#X msg 146 181 1 \$2 \, \$4 \$3 \$2;
+#X msg 265 180 0 \$2;
+#X connect 0 0 8 1;
+#X connect 1 0 8 2;
+#X connect 2 0 8 3;
+#X connect 3 0 9 1;
+#X connect 4 0 0 0;
+#X connect 5 0 2 0;
+#X connect 6 0 1 0;
+#X connect 7 0 3 0;
+#X connect 8 0 24 0;
+#X connect 9 0 25 0;
+#X connect 10 0 13 0;
+#X connect 11 0 12 0;
+#X connect 11 0 21 1;
+#X connect 12 0 9 0;
+#X connect 18 0 21 0;
+#X connect 21 0 8 0;
+#X connect 22 0 23 0;
+#X connect 23 0 12 0;
+#X connect 24 0 10 0;
+#X connect 25 0 10 0;
+#X coords 0 0 1 1 150 200 0;

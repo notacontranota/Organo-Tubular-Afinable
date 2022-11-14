@@ -1,0 +1,386 @@
+#N canvas 567 31 1032 802 12;
+#X obj 842 11 cnv 15 180 166 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 8 412 cnv 15 1014 380 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 732 11 cnv 15 102 166 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 732 186 cnv 15 290 220 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 493 12 cnv 15 234 394 empty empty empty 20 12 0 14 -1 -66577
+0;
+#X obj 495 14 cnv 15 230 390 empty empty Registros 20 12 0 18 -166177
+-1 0;
+#X obj 8 12 cnv 15 480 394 empty empty empty 20 12 0 14 -1 -66577 0
+;
+#X obj 10 14 cnv 15 476 390 empty empty Afinador 20 12 0 18 -166177
+-1 0;
+#X text 58 181 Aaron 1/4 comma;
+#X text 58 226 Kirnberger III;
+#X text 58 196 Salinas 1/3 comma;
+#X text 58 241 Wercmeister III;
+#X text 58 256 Vallotti;
+#X obj 734 13 cnv 15 98 162 empty empty Volumen 11 12 0 18 -166177
+-1 0;
+#X obj 10 414 cnv 15 1010 376 empty empty Consola 20 12 0 18 -166177
+-1 0;
+#X obj 734 188 cnv 15 286 216 empty empty LFO/Reverb 20 12 0 18 -166177
+-1 0;
+#X obj 917 362 tgl 15 1 s_reverb_on r_reverb_on apagada -45 6 0 10
+-249265 -1 -1 0 1;
+#X obj 809 422 bng 25 250 50 0 s_panic r_panic botón_pánico_(Esc)
+-114 12 0 10 -249265 -162081 -1;
+#X text 58 150 Afinación justa;
+#X text 58 166 Afinación pitagórica;
+#X text 58 211 Temperamento igual;
+#X text 39 371 Do;
+#X text 54 340 Do#;
+#X text 67 371 Re;
+#X text 97 371 Mi;
+#X text 113 371 Fa;
+#X text 125 340 Fa#;
+#X text 140 371 Sol;
+#X text 153 340 Sol#;
+#X text 82 340 Mib;
+#X text 171 371 La;
+#X text 185 340 Sib;
+#X text 203 371 Si;
+#X text 58 285 Escala espectral;
+#X text 58 270 Kellner-Bach;
+#X obj 844 13 principio;
+#X obj 502 49 bng 15 250 50 0 s_reg1 r_reg1 Pleno 17 7 0 10 -249265
+-162081 -1;
+#X obj 502 69 bng 15 250 50 0 s_reg0 r_reg0 Apagar_registros 17 7 0
+10 -249265 -162081 -1;
+#X obj 24 655 ui.keyboard @size 974 128 @receive "r_teclas" @send "s_teclas"
+@pinned 0 @background_color 0.94 0.85 0.76 1 @border_color 0 0 0 1
+@label_color 0 0 0 1 @active_color 0.62842 0.565183 0.501945 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @keys 61 @shift 36;
+#X obj 25 763 s outkey;
+#X obj 25 474 ui.sliders @size 974 120 @receive "r_consola" @send "s_consola"
+@pinned 1 @presetname "preset.consola" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @slider_color 0.62842 0.569135 0.505898 1 @select_color 0.580992
+0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "(null)" @label_inner 0 @label_side "top"
+@label_align "left" @label_valign "top" @label_margins 0 0 @min -40
+@max 60 @count 16 @auto_range_mode "none" @show_range 1 @auto_count
+0 @show_lines 0;
+#X obj 768 141 ui.dsp~ @size 30 30 @receive "(null)" @send "(null)"
+@pinned 0 @background_color 0.948558 0.857655 0.762799 1 @border_color
+0 0 0 1 @label_color 0 0 0 1 @active_color 0.580992 0.320138 0 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0;
+#X text 42 456 16';
+#X text 91 456 10 2/3';
+#X text 169 456 8';
+#X text 218 456 5 1/3';
+#X text 291 456 4';
+#X text 339 456 2 2/3';
+#X text 412 456 2';
+#X text 463 456 1 3/5';
+#X text 523 456 1 1/3';
+#X text 583 456 1 1/7';
+#X text 654 456 1';
+#X text 712 456 8/9';
+#X text 770 456 8/11';
+#X text 825 456 8/13';
+#X text 901 456 8';
+#X text 957 456 4';
+#X obj 528 309 ui.preset @size 165 42 @receive "r_presets" @send "(null)"
+@pinned 0 @background_color 0.948558 0.857655 0.762799 1 @border_color
+0 0 0 1 @label_color 0 0 0 1 @text_color 0 0 0 1 @empty_color 0.873464
+0.790465 0.703514 1 @stored_color 0.62842 0.569135 0.505898 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Memorias\ (0-9\ y\ A-F)" @label_inner
+0 @label_side "top" @label_align "left" @label_valign "top" @label_margins
+0 0;
+#X obj 29 600 nbx 5 14 -40 60 0 0 empty c1 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 88 600 nbx 5 14 -40 60 0 0 empty c2 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 152 600 nbx 5 14 -40 60 0 0 empty c3 empty 0 -8 0 10 -249265
+-1 -1 58.4 256;
+#X obj 211 600 nbx 5 14 -40 60 0 0 empty c4 empty 0 -8 0 10 -249265
+-1 -1 -36 256;
+#X obj 272 600 nbx 5 14 -40 60 0 0 empty c5 empty 0 -8 0 10 -249265
+-1 -1 60 256;
+#X obj 331 600 nbx 5 14 -40 60 0 0 empty c6 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 395 600 nbx 5 14 -40 60 0 0 empty c7 empty 0 -8 0 10 -249265
+-1 -1 -32.1 256;
+#X obj 454 600 nbx 5 14 -40 60 0 0 empty c8 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 516 600 nbx 5 14 -40 60 0 0 empty c9 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 575 600 nbx 5 14 -40 60 0 0 empty c10 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 639 600 nbx 5 14 -40 60 0 0 empty c11 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 698 600 nbx 5 14 -40 60 0 0 empty c12 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 759 600 nbx 5 14 -40 60 0 0 empty c13 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 818 600 nbx 5 14 -40 60 0 0 empty c14 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 882 600 nbx 5 14 -40 60 0 0 empty c15 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 941 600 nbx 5 14 -40 60 0 0 empty c16 empty 0 -8 0 10 -249265
+-1 -1 -40 256;
+#X obj 914 428 nbx 5 14 -50 50 0 0 s_desvio r_desvio cents: -35 8 0
+10 -249265 -1 -1 36 256;
+#X text 886 441 Tubos afinables;
+#X obj 838 271 ui.knob @size 28 28 @receive "r_room" @send "s_room_user"
+@pinned 0 @presetname "ui.knob.0" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @scale_color 0.6 0.6 0.6 1 @knob_color 0.62842 0.569135 0.505898
+1 @fontname "Helvetica" @fontweight "normal" @fontslant "roman" @fontsize
+11 @label "Tamaño\ de\ sala" @label_inner 0 @label_side "top" @label_align
+"center" @label_valign "top" @label_margins 0 0 @min 0 @max 127 @scale
+"linear" @midi_channel 0 @midi_control 0 @midi_pickup 1 @show_range
+0 @show_value 0 @active_scale 0;
+#X obj 942 271 ui.knob @size 29 29 @receive "r_damping" @send "s_damping_user"
+@pinned 0 @presetname "ui.knob.1" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @scale_color 0.6 0.6 0.6 1 @knob_color 0.62842 0.569135 0.505898
+1 @fontname "Helvetica" @fontweight "normal" @fontslant "roman" @fontsize
+11 @label "Factor\ de\ atenuación" @label_inner 0 @label_side "top"
+@label_align "center" @label_valign "top" @label_margins 0 0 @min 0
+@max 127 @scale "linear" @midi_channel 0 @midi_control 0 @midi_pickup
+1 @show_range 0 @show_value 0 @active_scale 0;
+#X obj 837 326 ui.knob @size 29 29 @receive "r_wet" @send "s_we_user"
+@pinned 0 @presetname "ui.knob.2" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @scale_color 0.6 0.6 0.6 1 @knob_color 0.62842 0.569135 0.505898
+1 @fontname "Helvetica" @fontweight "normal" @fontslant "roman" @fontsize
+11 @label "Húmedo" @label_inner 0 @label_side "top" @label_align "center"
+@label_valign "top" @label_margins 0 0 @min 0 @max 127 @scale "linear"
+@midi_channel 0 @midi_control 0 @midi_pickup 1 @show_range 0 @show_value
+0 @active_scale 0;
+#X obj 942 326 ui.knob @size 29 29 @receive "r_dry" @send "s_dry_user"
+@pinned 0 @presetname "ui.knob.3" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @scale_color 0.6 0.6 0.6 1 @knob_color 0.62842 0.569135 0.505898
+1 @fontname "Helvetica" @fontweight "normal" @fontslant "roman" @fontsize
+11 @label "Seco" @label_inner 0 @label_side "top" @label_align "center"
+@label_valign "top" @label_margins 0 0 @min 0 @max 127 @scale "linear"
+@midi_channel 0 @midi_control 0 @midi_pickup 1 @show_range 0 @show_value
+0 @active_scale 0;
+#X obj 693 45 ui.toggle @size 15 15 @receive "r_principal16" @send
+"s_principal16" @pinned 0 @presetname "ui.toggle.0" @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @active_color 0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 11 @label "Principal\ 16'" @label_inner
+0 @label_side "left" @label_align "right" @label_valign "top" @label_margins
+0 0 @on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 67 ui.toggle @size 15 15 @receive "r_principal8" @send "s_principal8"
+@pinned 0 @presetname "ui.toggle.1" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Principal\ 8'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 89 ui.toggle @size 15 15 @receive "r_bordon16" @send "s_bordon16"
+@pinned 0 @presetname "ui.toggle.2" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Bordón\ 16'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 111 ui.toggle @size 15 15 @receive "r_flauta8" @send "s_flauta8"
+@pinned 0 @presetname "ui.toggle.3" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Flauta\ 8'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 133 ui.toggle @size 15 15 @receive "r_flauta4" @send "s_flauta4"
+@pinned 0 @presetname "ui.toggle.4" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Flauta\ 4'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 155 ui.toggle @size 15 15 @receive "r_ottava4" @send "s_ottava4"
+@pinned 0 @presetname "ui.toggle.5" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Ottava\ 4'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 177 ui.toggle @size 15 15 @receive "r_oboe" @send "s_oboe"
+@pinned 0 @presetname "ui.toggle.6" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Oboe\ 8'" @label_inner 0 @label_side "left"
+@label_align "right" @label_valign "top" @label_margins 0 0 @on_value
+1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 221 ui.toggle @size 15 15 @receive "r_scharf6h" @send "s_scharf6h"
+@pinned 0 @presetname "ui.toggle.7" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Scharf\ 6h" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 693 243 ui.toggle @size 15 15 @receive "r_celeste8" @send "s_celeste8"
+@pinned 0 @presetname "ui.toggle.8" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Vox\ Celeste\ 8'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 226 63 ui.number @size 53 15 @receive "r_diapason" @send "s_diapason"
+@pinned 0 @presetname "ui.number.0" @background_color 0.948558 0.857655
+0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.62842 0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica"
+@fontweight "normal" @fontslant "roman" @fontsize 13 @label "Diapasón"
+@label_inner 0 @label_side "top" @label_align "center" @label_valign
+"top" @label_margins 0 0 @min 400 @max 460 @digits -1;
+#X obj 410 361 ui.number @size 53 15 @receive "r_c" @send "s_c" @pinned
+0 @presetname "ui.number.c" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Do" @label_inner 0
+@label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 354 336 ui.number @size 53 15 @receive "r_cs" @send "s_cs" @pinned
+0 @presetname "ui.number.cs" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Do#" @label_inner
+0 @label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 411 308 ui.number @size 53 15 @receive "r_d" @send "s_d" @pinned
+0 @presetname "ui.number.d" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Re" @label_inner 0
+@label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 355 282 ui.number @size 53 15 @receive "r_ds" @send "s_ds" @pinned
+0 @presetname "ui.number.ds" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Mib" @label_inner
+0 @label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 411 256 ui.number @size 53 15 @receive "r_e" @send "s_e" @pinned
+0 @presetname "ui.number.e" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Mi" @label_inner 0
+@label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 412 204 ui.number @size 53 15 @receive "r_f" @send "s_f" @pinned
+0 @presetname "ui.number.f" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Fa" @label_inner 0
+@label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 353 182 ui.number @size 53 15 @receive "r_fs" @send "s_fs" @pinned
+0 @presetname "ui.number.fs" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Fa#" @label_inner
+0 @label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 412 150 ui.number @size 53 15 @receive "r_g" @send "s_g" @pinned
+0 @presetname "ui.number.g" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Sol" @label_inner
+0 @label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 354 125 ui.number @size 53 15 @receive "r_gs" @send "s_gs" @pinned
+0 @presetname "ui.number.gs" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Sol#" @label_inner
+0 @label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 412 96 ui.number @size 53 15 @receive "r_a" @send "s_a" @pinned
+0 @presetname "ui.number.a" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "La" @label_inner 0
+@label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 353 72 ui.number @size 53 15 @receive "r_as" @send "s_as" @pinned
+0 @presetname "ui.number.as" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Sib" @label_inner
+0 @label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 411 43 ui.number @size 53 15 @receive "r_b" @send "s_b" @pinned
+0 @presetname "ui.number.b" @background_color 0.948558 0.857655 0.762799
+1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color 0.62842
+0.569135 0.505898 1 @text_color 0 0 0 1 @fontname "Helvetica" @fontweight
+"normal" @fontslant "roman" @fontsize 13 @label "Si" @label_inner 0
+@label_side "top" @label_align "center" @label_valign "top" @label_margins
+0 0 @min -100 @max 100 @digits 1;
+#X obj 39 358 ui.radio @size 180 15 @receive "r_root" @send "s_root"
+@pinned 0 @presetname "ui.radio.root" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @active_color 0.62842 0.569135 0.505898 1 @fontname "Helvetica"
+@fontweight "normal" @fontslant "roman" @fontsize 11 @label "Fundamental\ (Derecha\ e\ Izquierda)"
+@label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 17 @nitems 12 @mode 0;
+#X obj 40 152 ui.radio @size 15 150 @receive "r_temp-sel" @send "s_temp-sel"
+@pinned 0 @presetname "ui.vrd.temp" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @active_color 0.62842 0.569135 0.505898 1 @fontname "Helvetica"
+@fontweight "normal" @fontslant "roman" @fontsize 11 @label "Temperamentos\ (Abajo\ y\ Arriba)"
+@label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 13 @nitems 10 @mode 0;
+#X obj 227 86 ui.radio @size 45 15 @receive "r_diapasel" @send "s_diapasel"
+@pinned 0 @presetname "ui.radio.diapasel" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @active_color 0.62842 0.569135 0.505898 1 @fontname "Helvetica"
+@fontweight "normal" @fontslant "roman" @fontsize 11 @label "Selector\ 415\ -\ 432\ -\ 440:"
+@label_inner 0 @label_side "left" @label_align "right" @label_valign
+"top" @label_margins 0 0 @nitems 3 @mode 0;
+#X obj 693 199 ui.toggle @size 15 15 @receive "r_viola8" @send "s_viola8"
+@pinned 0 @presetname "ui.toggle.viola8" @background_color 0.948558
+0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0 0 1 @active_color
+0.580992 0.320138 0 1 @fontname "Helvetica" @fontweight "normal" @fontslant
+"roman" @fontsize 11 @label "Viola\ 8'" @label_inner 0 @label_side
+"left" @label_align "right" @label_valign "top" @label_margins 0 0
+@on_value 1 @off_value 0 @midi_channel 0 @midi_control 0;
+#X obj 766 260 ui.slider @size 30 120 @receive "r_lfo" @send "s_lfo"
+@pinned 0 @presetname "ui.slider.lfo" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @knob_color 0.580992 0.320138 0 1 @text_color 0 0 0 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"LFO" @label_inner 0 @label_side "top" @label_align "center" @label_valign
+"top" @label_margins 0 0 @min 0 @max 1 @mode 0 @scale "linear" @active_scale
+0 @midi_channel 0 @midi_control 0 @midi_pickup 1 @show_value 0 @value_pos
+"center" @value_precision 2;
+#X obj 769 37 ui.slider @size 30 100 @receive "r_vol" @send "s_vol"
+@pinned 0 @presetname "ui.slider.vol" @mouse_events 0 @background_color
+0.948558 0.857655 0.762799 1 @border_color 0 0 0 1 @label_color 0 0
+0 1 @knob_color 0.580992 0.320138 0 1 @text_color 0 0 0 1 @fontname
+"Helvetica" @fontweight "normal" @fontslant "roman" @fontsize 11 @label
+"(null)" @label_inner 0 @label_side "top" @label_align "center" @label_valign
+"top" @label_margins 0 0 @min 0 @max 1 @mode 0 @scale "linear" @active_scale
+0 @midi_channel 0 @midi_control 0 @midi_pickup 1 @show_value 0 @value_pos
+"center" @value_precision 2;
+#X obj 528 359 ui.label @size 165 20 @receive "(null)" @send "(null)"
+@pinned 1 @background_color 0.62842 0.569135 0.505898 1 @border_color
+0.6 0.6 0.6 1 @label_color 0 0 0 1 @text_color 0 0 0 1 @label "(null)"
+@label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @align "left" @text "Grabar:\ Shift\ +\ 0-9\ y\ A-F"
+@fontname "Helvetica" @fontweight "normal" @fontslant "roman" @fontsize
+10 @margin_top 0 @margin_left 0 @margin_bottom 0 @margin_right 0;
+#X obj 528 381 ui.label @size 165 20 @receive "(null)" @send "(null)"
+@pinned 1 @background_color 0.62842 0.569135 0.505898 1 @border_color
+0.6 0.6 0.6 1 @label_color 0 0 0 1 @text_color 0 0 0 1 @label "(null)"
+@label_inner 0 @label_side "top" @label_align "left" @label_valign
+"top" @label_margins 0 0 @align "left" @text "Borrar:\ Shift\ +\ Alt\ +\ 0-9\ y\ A-F"
+@fontname "Helvetica" @fontweight "normal" @fontslant "roman" @fontsize
+10 @margin_top 0 @margin_left 0 @margin_bottom 0 @margin_right 0;
+#X connect 38 0 39 0;
