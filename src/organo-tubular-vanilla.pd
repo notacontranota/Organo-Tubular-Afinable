@@ -1,0 +1,227 @@
+#N canvas 369 25 991 715 12;
+#X obj 10 -186 cnv 15 304 404 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#X obj 12 -184 cnv 15 300 400 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 19 -110 vradio 20 1 0 11 s_temp-sel r_temp-sel empty 0 -8 0
+10 -261682 -258113 -1 4;
+#X text 43 -111 Afinación Justa;
+#X text 43 -91 Afinación Pitagórica;
+#X text 43 -72 Aaron 1/4 comma;
+#X text 43 -52 Salinas 1/3 comma;
+#X text 43 -31 Temperamento igual;
+#X text 44 -12 Kirnberger III;
+#X text 45 9 Wercmeister III;
+#X text 45 29 Vallotti;
+#X text 45 49 Kellner-Bach;
+#X text 45 69 Escala espectral;
+#X text 45 90 Resonancia inferior;
+#X floatatom 124 -174 5 400 460 0 Diapasón r_diapason s_diapason;
+#X obj 125 -145 hradio 20 1 0 3 s_diapasel r_diapasel empty 0 0 0 10
+-261682 -258113 -1 2;
+#X text 19 -146 415·432·440 Hz.;
+#X obj 19 133 hradio 20 1 0 12 s_root r_root empty 0 -8 0 10 -261682
+-258113 -1 10;
+#X text 21 150 Do;
+#X text 60 150 Re;
+#X text 102 150 Mi;
+#X text 121 150 Fa;
+#X text 157 150 Sol;
+#X text 199 150 La;
+#X text 240 150 Si;
+#X text 38 114 Do#;
+#X text 78 114 Mib;
+#X text 137 114 Fa#;
+#X text 174 114 Sol#;
+#X text 217 114 Sib;
+#X obj 10 -209 cnv 15 84 24 empty empty empty 20 12 0 36 -128992 -66577
+0;
+#X obj 12 -207 cnv 15 80 20 empty empty Afinador 5 10 0 14 -203904
+-1 0;
+#X obj 316 -186 cnv 15 598 58 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#X obj 318 -184 principio-vanilla;
+#X obj 316 -99 cnv 15 254 318 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#X obj 318 -97 cnv 15 250 314 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 329 -85 tgl 15 0 s_principal16 r_principal16 Principal_16 17
+7 0 10 -261682 -258113 -1 0 1;
+#X obj 329 -62 tgl 15 0 s_principal8 r_principal8 Principal_8 17 7
+0 10 -261682 -258113 -1 0 1;
+#X obj 329 -39 tgl 15 0 s_bordon16 r_bordon16 Bordón_16 17 7 0 10
+-261682 -258113 -1 0 1;
+#X obj 329 -16 tgl 15 0 s_flauta8 r_flauta8 Flauta_8 17 7 0 10 -261682
+-258113 -1 0 1;
+#X obj 329 7 tgl 15 0 s_flauta4 r_flauta4 Flauta_4 17 7 0 10 -261682
+-258113 -1 0 1;
+#X obj 329 30 tgl 15 0 s_ottava4 r_ottava4 Ottava_4 17 7 0 10 -261682
+-258113 -1 0 1;
+#X obj 329 53 tgl 15 0 s_oboe r_oboe Oboe_8 17 7 0 10 -261682 -258113
+-1 0 1;
+#X obj 329 76 tgl 15 0 s_viola8 r_viola8 Viola_8 17 7 0 10 -261682
+-258113 -1 0 1;
+#X obj 329 99 tgl 15 0 s_scharf6h r_scharf6h Scharf_6h 17 7 0 10 -261682
+-258113 -1 0 1;
+#X obj 329 122 tgl 15 0 s_celeste8 r_celeste8 Vox_Celeste_8 17 7 0
+10 -261682 -258113 -1 0 1;
+#X obj 437 -85 bng 15 250 50 0 s_reg1 r_reg1 Pleno 17 7 0 10 -261682
+-258113 -1;
+#X obj 437 -62 bng 15 250 50 0 s_reg0 r_reg0 Apagar_registros 17 7
+0 10 -261682 -258113 -1;
+#X obj 316 -122 cnv 15 84 24 empty empty empty 20 12 0 36 -128992 -66577
+0;
+#X obj 318 -120 cnv 15 80 20 empty empty Registros 5 10 0 14 -203904
+-1 0;
+#X obj 10 248 cnv 15 904 204 empty empty empty 20 12 0 14 -128992 -66577
+0;
+#X obj 12 250 cnv 15 900 200 empty empty empty 20 12 0 14 -261234 -66577
+0;
+#X obj 15 329 vsl 54 100 -40 60 0 0 s_s1 r_s1 16' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 15 434 nbx 5 14 -40 60 0 0 empty c1 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 71 329 vsl 54 100 -40 60 0 0 s_s2 r_s2 10\\\ 2/3' 0 -9 0 10
+-262130 -258113 -1 0 1;
+#X obj 71 434 nbx 5 14 -40 60 0 0 empty c2 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 127 329 vsl 54 100 -40 60 0 0 s_s3 r_s3 8' 0 -9 0 10 -262130
+-258113 -1 9742 1;
+#X obj 127 434 nbx 5 14 -40 60 0 0 empty c3 empty 0 -8 0 10 -262130
+-1 -1 58.4 256;
+#X obj 183 329 vsl 54 100 -40 60 0 0 s_s4 r_s4 5\\\ 1/3' 0 -9 0 10
+-262130 -258113 -1 396 1;
+#X obj 183 434 nbx 5 14 -40 60 0 0 empty c4 empty 0 -8 0 10 -262130
+-1 -1 -36 256;
+#X obj 239 329 vsl 54 100 -40 60 0 0 s_s5 r_s5 4' 0 -9 0 10 -262130
+-258113 -1 9900 1;
+#X obj 239 434 nbx 5 14 -40 60 0 0 empty c5 empty 0 -8 0 10 -262130
+-1 -1 60 256;
+#X obj 295 329 vsl 54 100 -40 60 0 0 s_s6 r_s6 2\\\ 2/3' 0 -9 0 10
+-262130 -258113 -1 0 1;
+#X obj 295 434 nbx 5 14 -40 60 0 0 empty c6 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 351 329 vsl 54 100 -40 60 0 0 s_s7 r_s7 2' 0 -9 0 10 -262130
+-258113 -1 782 1;
+#X obj 351 434 nbx 5 14 -40 60 0 0 empty c7 empty 0 -8 0 10 -262130
+-1 -1 -32.1 256;
+#X obj 407 329 vsl 54 100 -40 60 0 0 s_s8 r_s8 1\\\ 3/5' 0 -9 0 10
+-262130 -258113 -1 0 1;
+#X obj 407 434 nbx 5 14 -40 60 0 0 empty c8 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 463 329 vsl 54 100 -40 60 0 0 s_s9 r_s9 1\\\ 1/3' 0 -9 0 10
+-262130 -258113 -1 0 1;
+#X obj 463 434 nbx 5 14 -40 60 0 0 empty c9 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 519 329 vsl 54 100 -40 60 0 0 s_s10 r_s10 1\\\ 1/7' 0 -9 0 10
+-262130 -258113 -1 0 1;
+#X obj 519 434 nbx 5 14 -40 60 0 0 empty c10 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 575 329 vsl 54 100 -40 60 0 0 s_s11 r_s11 1' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 575 434 nbx 5 14 -40 60 0 0 empty c11 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 630 329 vsl 54 100 -40 60 0 0 s_s12 r_s12 8/9' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 631 434 nbx 5 14 -40 60 0 0 empty c12 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 687 329 vsl 54 100 -40 60 0 0 s_s13 r_s13 8/11' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 687 434 nbx 5 14 -40 60 0 0 empty c13 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 743 329 vsl 54 100 -40 60 0 0 s_s14 r_s14 8/13' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 743 434 nbx 5 14 -40 60 0 0 empty c14 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 799 329 vsl 54 100 -40 60 0 0 s_s15 r_s15 8' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 799 434 nbx 5 14 -40 60 0 0 empty c15 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 855 329 vsl 54 100 -40 60 0 0 s_s16 r_s16 4' 0 -9 0 10 -262130
+-258113 -1 0 1;
+#X obj 855 434 nbx 5 14 -40 60 0 0 empty c16 empty 0 -8 0 10 -262130
+-1 -1 -40 256;
+#X obj 10 225 cnv 15 84 24 empty empty empty 20 12 0 36 -128992 -66577
+0;
+#X obj 12 227 cnv 15 80 20 empty empty Consola 5 10 0 14 -203904 -1
+0;
+#X obj 842 275 nbx 5 14 -50 50 0 0 s_desvio r_desvio Cents: -35 8 0
+10 -261682 -1 -1 36 256;
+#X text 799 290 Tubos afinables;
+#X obj 627 261 bng 30 250 50 0 s_panic r_panic Botón_pánico -80 20
+0 10 -261682 -258113 -1;
+#X obj 572 -99 cnv 15 342 318 empty empty empty 20 12 0 14 -128992
+-66577 0;
+#X obj 574 -97 cnv 15 338 314 empty empty empty 20 12 0 14 -261234
+-66577 0;
+#X obj 837 -65 vsl 55 100 0 1 0 0 s_vol r_vol Volumen 0 -9 0 10 -261682
+-258113 -1 9900 1;
+#X obj 594 -65 vsl 55 100 0 127 0 0 s_room_user r_room Tamaño_de_sala
+0 -9 0 10 -261682 -258113 -1 7016 1;
+#X obj 700 -65 vsl 55 100 0 127 0 0 s_damping_user r_damping Factor_de_atenuación
+0 -9 0 10 -261682 -258113 -1 1559 1;
+#X obj 594 62 vsl 55 100 0 127 0 0 s_wet_user r_wet Húmedo 0 -9 0
+10 -261682 -258113 -1 7016 1;
+#X obj 700 62 vsl 55 100 0 127 0 0 s_dry_user r_dry Seco 0 -9 0 10
+-261682 -258113 -1 8575 1;
+#X obj 594 192 tgl 15 0 s_reverb_on r_reverb_on Apagado 17 7 0 10 -261682
+-258113 -1 0 1;
+#X obj 837 62 vsl 55 100 0 1 0 0 s_lfo r_lfo LFO 0 -9 0 10 -261682
+-258113 -1 0 1;
+#X obj 572 -122 cnv 15 84 24 empty empty empty 20 12 0 36 -128992 -66577
+0;
+#X obj 574 -120 cnv 15 80 20 empty empty Efectos 5 10 0 14 -203904
+-1 0;
+#X obj 252 92 nbx 5 14 -100 100 0 0 s_c r_c empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 68 nbx 5 14 -100 100 0 0 s_cs r_cs empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 44 nbx 5 14 -100 100 0 0 s_d r_d empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 20 nbx 5 14 -100 100 0 0 s_ds r_ds empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -4 nbx 5 14 -100 100 0 0 s_e r_e empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -28 nbx 5 14 -100 100 0 0 s_f r_f empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -52 nbx 5 14 -100 100 0 0 s_fs r_fs empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -76 nbx 5 14 -100 100 0 0 s_g r_g empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -100 nbx 5 14 -100 100 0 0 s_gs r_gs empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -124 nbx 5 14 -100 100 0 0 s_a r_a empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -148 nbx 5 14 -100 100 0 0 s_as r_as empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X obj 252 -172 nbx 5 14 -100 100 0 0 s_b r_b empty 0 -8 0 10 -261682
+-1 -1 0 256;
+#X text 231 91 Do;
+#X text 231 43 Re;
+#X text 231 -5 Mi;
+#X text 231 -28 Fa;
+#X text 224 -77 Sol;
+#X text 231 -127 La;
+#X text 231 -173 Si;
+#X text 224 67 Do#;
+#X text 224 19 Mib;
+#X text 224 -53 Fa#;
+#X text 217 -101 Sol#;
+#X text 224 -149 Sib;
+#X obj 316 -209 cnv 15 84 24 empty empty empty 20 12 0 36 -128992 -66577
+0;
+#X obj 318 -207 cnv 15 80 20 empty empty Acerca_de 5 10 0 14 -203904
+-1 0;
+#X obj 699 192 hradio 15 1 0 4 s_effect-preset empty Memorias 0 -8
+0 10 -261682 -258113 -1 0;
+#X obj 767 192 bng 15 250 50 0 s_save-effect-preset empty Guardar 17
+7 0 10 -261682 -258113 -1;
+#X obj 16 269 hradio 15 1 0 10 s_consola-preset r_consola-preset Memorias
+0 -8 0 10 -261682 -258113 -1 0;
+#X obj 175 269 bng 15 250 50 0 s_save-consola-preset empty Guardar
+17 7 0 10 -261682 -258113 -1;
+#X obj 177 190 hradio 15 1 0 4 s_tuner-preset empty Memorias 0 -8 0
+10 -261682 -258113 -1 0;
+#X obj 245 190 bng 15 250 50 0 s_save-tuner-preset empty Guardar 17
+7 0 10 -261682 -258113 -1;
+#X coords 0 715 1 714 85 60 0;
