@@ -1,5 +1,8 @@
 # Órgano Tubular Afinable
-![*Órgano Tubular Afinable v.0.1*](resources/pipe_organ.png)
+
+![*Órgano Tubular Afinable (CEAMMC) Op.0.9.2*](resources/pipe_organ.png)
+
+![*Órgano Tubular Afinable (VANILLA) Op.0.9.2*](resources/pipe_organ-vanilla.png)
 
 **Afinación y temperamentos históricoa** es un texto elaborado pro los profesores Pablo Herrera y Diego Vázquez, texto éste que aborda la temática de la historia de las afinaciones en la música atravesada por los conceptos de *lo aristoxénico* y *los pitagórico* como ordenadores de las diferentes soluciones que a lo largo de los siglos se ha dado al problema de la afinación musical.
 
@@ -9,6 +12,7 @@
 Aunque es perfectamente funcional enn Pure Data, recomendamos instalar **Purr Data** para la ejecución de **Órgano Tubular Temperado**, ya que esta variante de Pure Data responde mejor ante los controladores MIDI. Por lo demás, da igual Pure Data o Purr Data.
 
 ## Características
+* 16 tubos, dos afinables, incluye armónicos 7, 9, 11, 13 (1 1/7', 8/9', 8/11', 8/13')
 * 10 registros combinables, a saber:
 	* Principal 16'
 	* Principal 8'
@@ -20,9 +24,10 @@ Aunque es perfectamente funcional enn Pure Data, recomendamos instalar **Purr Da
 	* Viola 8'
 	* Scharf 6h
 	* Vox Celeste 8'
-* 16 memorias de los controles
+* 16 memorias de los controles (versión CEAMMC).
+* 4 memorias para el afinador, 4 memorias para la *reverb*, 10 memorias para la consola. (versión VANILLA).
 * Polifonía de 8 teclas
-* 10 temperamento, a saber:
+* 11 temperamento, a saber:
 	* Afinación justa
 	* Afinación pitagórica
 	* Aaron 1/4 comma
@@ -33,6 +38,7 @@ Aunque es perfectamente funcional enn Pure Data, recomendamos instalar **Purr Da
 	* Vallotti
 	* Kellner-Bach
 	* Escala espectral
+    * Resonancia inferior
 * Diapasón afinable entre 400 y 460 hz., con afinación rápida en 415, 432 y 440. 
 * Efectos:
 	* Reverberación
